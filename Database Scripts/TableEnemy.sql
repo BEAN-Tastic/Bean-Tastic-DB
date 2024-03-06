@@ -3,7 +3,7 @@ GO
 
 CREATE TABLE [dbo].[Enemy](
 	[enemyId] [INT] IDENTITY(1,1) NOT NULL,
-	[enemyDifficultyId] [INT],
+	[enemyDifficultyId] [INT] NOT NULL,
 	[name] [VARCHAR] (30) NOT NULL,
 	[description] [VARCHAR] (100) NOT NULL,
 	PRIMARY KEY CLUSTERED (enemyId),
