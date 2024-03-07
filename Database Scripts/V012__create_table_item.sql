@@ -3,10 +3,10 @@ GO
 
 CREATE TABLE [dbo].[Item](
 	[itemId] [INT] IDENTITY(1,1) NOT NULL,
-	[itemQualityID] [INT] NOT NULL,
+	[itemQualityId] [INT] NOT NULL,
 	[name] [VARCHAR] (30) NOT NULL,
 	[description] [VARCHAR] (100) NOT NULL,
 	PRIMARY KEY CLUSTERED (itemId),
-	FOREIGN KEY (itemQualityID) REFERENCES [dbo].[ItemQuality](itemQualityID)
+	FOREIGN KEY (itemQualityId) REFERENCES [dbo].[ItemQuality](itemQualityId)
 );
 GO
