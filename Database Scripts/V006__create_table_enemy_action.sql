@@ -8,6 +8,6 @@ CREATE TABLE [dbo].[EnemyAction](
 	[name] [VARCHAR] (30) NOT NULL,
 	[description] [VARCHAR] (100) NOT NULL
 	PRIMARY KEY CLUSTERED (enemyActionId),
-	FOREIGN KEY (enemyActionTypeId) REFERENCES [dbo].[EnemyActionType](enemyActionTypeId)
+	FOREIGN KEY (actionTypeId) REFERENCES [dbo].[ActionType](actionTypeId)
 );
 GO
