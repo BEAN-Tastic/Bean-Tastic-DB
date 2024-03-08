@@ -1,7 +1,7 @@
 USE BeantasticDB;
 GO
 
-INSERT INTO [dbo].[ActionType] ([description], [markiplier])
+INSERT INTO [dbo].[ActionType] ([description], [multiplier])
 VALUES ('Strong', 1.5),
        ('Normal', 1.0),
        ('Weak', 0.5),
