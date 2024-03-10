@@ -1,13 +1,1 @@
-USE master;
-GO
-
-IF EXISTS(SELECT * FROM sys.databases WHERE NAME='BeantasticDB')
-ALTER DATABASE BeantasticDB SET single_user WITH ROLLBACK IMMEDIATE
-DROP DATABASE BeantasticDB;
-GO
-
 CREATE DATABASE BeantasticDB;
-GO
-
-USE BeantasticDB;
-GO

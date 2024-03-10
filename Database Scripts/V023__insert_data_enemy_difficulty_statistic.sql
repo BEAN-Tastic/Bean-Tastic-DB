@@ -1,53 +1,49 @@
-USE BeantasticDB;
-GO
-
-INSERT INTO [dbo].[EnemyDifficultyStatistic] ([statisticTypeId], [enemyDifficultyId], [points])
-VALUES 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Easy'), 
-     50), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Easy'), 
-     30), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Easy'), 
-     100),
-	 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Easy'), 
-     30),
-	 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Medium'), 
-     70), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Medium'), 
-     40), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Medium'), 
-     150),
-	 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Medium'), 
+INSERT INTO EnemyDifficultyStatistic (statisticTypeId, enemyDifficultyId, points)
+VALUES
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Easy' LIMIT 1),
      50),
-	 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Hard'), 
-     90), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Hard'), 
-     50), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Hard'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Easy' LIMIT 1),
+     30),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Easy' LIMIT 1),
+     100),
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Easy' LIMIT 1),
+     30),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Medium' LIMIT 1),
+     70),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Medium' LIMIT 1),
+     40),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Medium' LIMIT 1),
+     150),
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Medium' LIMIT 1),
+     50),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Hard' LIMIT 1),
+     90),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Hard' LIMIT 1),
+     50),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Hard' LIMIT 1),
      200),
-	 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyDifficultyId] FROM [dbo].[EnemyDifficulty] WHERE [name] = 'Hard'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyDifficultyId FROM EnemyDifficulty WHERE name = 'Hard' LIMIT 1),
      75);
-GO

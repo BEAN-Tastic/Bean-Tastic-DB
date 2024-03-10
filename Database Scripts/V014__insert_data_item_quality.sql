@@ -1,9 +1,5 @@
-USE BeantasticDB;
-GO
-
-INSERT INTO [dbo].[ItemQuality] ([name])
+INSERT INTO ItemQuality (name)
 VALUES ('Epic'),
        ('Rare'),
        ('Common'),
-	   ('Uncommon');
-GO
+       ('Uncommon');
