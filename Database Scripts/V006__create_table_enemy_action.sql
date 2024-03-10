@@ -1,13 +1,9 @@
-USE BeantasticDB;
-GO
-
-CREATE TABLE [dbo].[EnemyAction](
-	[enemyActionId] [INT] IDENTITY(1,1) NOT NULL,
-	[enemyId] [INT] NOT NULL,
-    [ActionTypeId] [INT] NOT NULL,
-	[name] [VARCHAR] (30) NOT NULL,
-	[description] [VARCHAR] (100) NOT NULL
-	PRIMARY KEY CLUSTERED (enemyActionId),
-	FOREIGN KEY (actionTypeId) REFERENCES [dbo].[ActionType](actionTypeId)
+CREATE TABLE EnemyAction (
+    enemyActionId SERIAL PRIMARY KEY,
+    enemyId INT NOT NULL,
+    actionTypeId INT NOT NULL,
+    name VARCHAR(30) NOT NULL,
+    description VARCHAR(100) NOT NULL,
+    FOREIGN KEY (actionTypeId) REFERENCES ActionType(actionTypeId)
 );
-GO
+

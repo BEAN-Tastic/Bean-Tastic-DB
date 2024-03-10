@@ -1,13 +1,8 @@
-USE BeantasticDB;
-GO
-
-CREATE TABLE [dbo].[EnemyDifficultyStatistic](
-	[enemyDifficultyStatiticId] [INT] IDENTITY(1,1) NOT NULL,
-	[statisticTypeId] [INT] NOT NULL,
-	[enemyDifficultyId] [INT] NOT NULL,
-	[points] [INT] NOT NULL,
-	PRIMARY KEY CLUSTERED (enemyDifficultyStatiticId),
-	FOREIGN KEY (statisticTypeId) REFERENCES [dbo].[StatisticType](statisticTypeId),
-	FOREIGN KEY (enemyDifficultyId) REFERENCES [dbo].[EnemyDifficulty](enemyDifficultyId)
+CREATE TABLE EnemyDifficultyStatistic (
+    enemyDifficultyStatiticId SERIAL PRIMARY KEY,
+    statisticTypeId INT NOT NULL,
+    enemyDifficultyId INT NOT NULL,
+    points INT NOT NULL,
+    FOREIGN KEY (statisticTypeId) REFERENCES StatisticType(statisticTypeId),
+    FOREIGN KEY (enemyDifficultyId) REFERENCES EnemyDifficulty(enemyDifficultyId)
 );
-GO

@@ -1,165 +1,161 @@
-USE BeantasticDB;
-GO
+INSERT INTO EnemyStatisticModifier (statisticTypeId, enemyId, points)
+VALUES
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Sorcerer Soup' LIMIT 1),
+     10),
 
-INSERT INTO [dbo].[EnemyStatisticModifier] ([statisticTypeId], [enemyId], [points])
-VALUES 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Sorcerer Soup'), 
-     10), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Sorcerer Soup'), 
-     -5), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Sorcerer Soup'), 
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Sorcerer Soup' LIMIT 1),
+     -5),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Sorcerer Soup' LIMIT 1),
      -20),
-	 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Sorcerer Soup'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Sorcerer Soup' LIMIT 1),
      -20),
-	 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Cursed Carrot'), 
-     15), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Cursed Carrot'), 
-     5), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Cursed Carrot'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Cursed Carrot' LIMIT 1),
+     15),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Cursed Carrot' LIMIT 1),
+     5),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Cursed Carrot' LIMIT 1),
      -10),
-	 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Cursed Carrot'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Cursed Carrot' LIMIT 1),
      -10),
-	 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Haunted Hamburger'), 
-     20), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Haunted Hamburger'), 
-     10), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Haunted Hamburger'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Haunted Hamburger' LIMIT 1),
+     20),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Haunted Hamburger' LIMIT 1),
+     10),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Haunted Hamburger' LIMIT 1),
      -15),
-	 
-	 ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Haunted Hamburger'), 
+
+	 ((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Haunted Hamburger' LIMIT 1),
      -15),
-	 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Ghoulish Grapes'), 
-     25), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Ghoulish Grapes'), 
-     15), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Ghoulish Grapes'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Ghoulish Grapes' LIMIT 1),
+     25),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Ghoulish Grapes' LIMIT 1),
+     15),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Ghoulish Grapes' LIMIT 1),
      -25),
-	 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Ghoulish Grapes'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Ghoulish Grapes' LIMIT 1),
      -25),
-	 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Sinister Sushi'), 
-     30), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Sinister Sushi'), 
-     20), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Sinister Sushi'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Sinister Sushi' LIMIT 1),
+     30),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Sinister Sushi' LIMIT 1),
+     20),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Sinister Sushi' LIMIT 1),
      -30),
-	 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Sinister Sushi'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Sinister Sushi' LIMIT 1),
      -30),
-	 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Menacing Muffin'), 
-     35), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Menacing Muffin'), 
-     25), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Menacing Muffin'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Menacing Muffin' LIMIT 1),
+     35),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Menacing Muffin' LIMIT 1),
+     25),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Menacing Muffin' LIMIT 1),
      -35),
-	 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Menacing Muffin'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Menacing Muffin' LIMIT 1),
      -35),
-	 
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wayward Waffle'), 
-     40), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wayward Waffle'), 
-     30), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wayward Waffle'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Wayward Waffle' LIMIT 1),
+     40),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Wayward Waffle' LIMIT 1),
+     30),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Wayward Waffle' LIMIT 1),
      -40),
-	
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wayward Waffle'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Wayward Waffle' LIMIT 1),
      -40),
-	
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Cursed Cauliflower'), 
-     45), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Cursed Cauliflower'), 
-     35), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Cursed Cauliflower'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Cursed Cauliflower' LIMIT 1),
+     45),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Cursed Cauliflower' LIMIT 1),
+     35),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Cursed Cauliflower' LIMIT 1),
      -45),
 
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Cursed Cauliflower'), 
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Cursed Cauliflower' LIMIT 1),
      -45),
-	
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wicked Watermelon'), 
-     50), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wicked Watermelon'), 
-     40), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wicked Watermelon'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Wicked Watermelon' LIMIT 1),
+     50),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Wicked Watermelon' LIMIT 1),
+     40),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Wicked Watermelon' LIMIT 1),
      -50),
-		
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wicked Watermelon'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Wicked Watermelon' LIMIT 1),
      -50),
-	
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Spooky Spaghetti'), 
-     55), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Spooky Spaghetti'), 
-     45), 
-    
-    ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Spooky Spaghetti'), 
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Spooky Spaghetti' LIMIT 1),
+     55),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'DEFENSE' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Spooky Spaghetti' LIMIT 1),
+     45),
+
+    ((SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Spooky Spaghetti' LIMIT 1),
      -55),
-	
-	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Spooky Spaghetti'), 
+
+	((SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
+     (SELECT enemyId FROM Enemy WHERE name = 'Spooky Spaghetti' LIMIT 1),
      -55);
-GO
