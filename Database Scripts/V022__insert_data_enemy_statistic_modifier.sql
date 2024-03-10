@@ -100,19 +100,19 @@ VALUES
      -35),
 	 
     ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wicked Waffle'), 
+     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wayward Waffle'), 
      40), 
     
     ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'DEFENSE'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wicked Waffle'), 
+     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wayward Waffle'), 
      30), 
     
     ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wicked Waffle'), 
+     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wayward Waffle'), 
      -40),
 	
 	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
-     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wicked Waffle'), 
+     (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Wayward Waffle'), 
      -40),
 	
     ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'ATTACK'), 
@@ -157,7 +157,7 @@ VALUES
     
     ((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'HEALTH'), 
      (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Spooky Spaghetti'), 
-     -55);
+     -55),
 	
 	((SELECT [statisticTypeId] FROM [dbo].[StatisticType] WHERE [name] = 'RIZZ'), 
      (SELECT [enemyId] FROM [dbo].[Enemy] WHERE [name] = 'Spooky Spaghetti'), 

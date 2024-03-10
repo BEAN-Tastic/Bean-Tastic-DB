@@ -1,4 +1,6 @@
--- Create 20 magical food-related items
+USE BeantasticDB;
+GO
+
 INSERT INTO [dbo].[Item] ([itemQualityId], [name], [description])
 VALUES 
     ((SELECT [itemQualityId] FROM [dbo].[ItemQuality] WHERE [name] = 'Common'), 
