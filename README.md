@@ -122,6 +122,10 @@ To trigger a manual deployment, instructions from GitHub can be followed to [tri
 
 ![aws-console-deployed-db.png](readme-images/aws-console-deployed-db.png)
 
+
+After the deployment as run, manually set the `AWS_RDS_ENDPOINT` secret!!! You can get
+the RDS instance by checking the AWS Console.
+
 ## Setting Up The Migrations
 
 The final step is to run the migrations using flyway. If the secrets have all
