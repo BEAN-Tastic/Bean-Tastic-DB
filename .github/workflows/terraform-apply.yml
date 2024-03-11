@@ -1,6 +1,12 @@
 name: "Deploy Terraform"
 
-on: [pull_request, workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - infrastructure
 
 permissions:
   id-token: write
@@ -46,9 +52,3 @@ jobs:
       - name: Apply infrastructure plan
         id: apply
         run: terraform apply .tfplan
-
-      - name: log-endpoint
-        run: |
-          ls 
-          tree
-          cat infrastructure/outputs.tf
