@@ -46,9 +46,3 @@ jobs:
       - name: Apply infrastructure plan
         id: apply
         run: terraform apply .tfplan
-
-      - name: log-endpoint
-        run: |
-          ls 
-          tree
-          cat infrastructure/outputs.tf
