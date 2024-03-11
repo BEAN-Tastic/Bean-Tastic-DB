@@ -13,7 +13,6 @@ jobs:
       FLYWAY_URL: jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT }}:${{ secrets.DB_PORT }}/BeantasticDB
       FLYWAY_USER: ${{ secrets.DB_USERNAME }}
       FLYWAY_PASSWORD: ${{ secrets.DB_PASSWORD }}
-      FLYWAY_SCHEMA: flyway
       FLYWAY_LOCATION: filesystem:migrations
     defaults:
       run:
