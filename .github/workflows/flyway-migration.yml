@@ -1,13 +1,13 @@
 name: Migrate Database
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - migrations
+  workflow_run:
+    workflows: ["Deploy Terraform"]
+    types:
+      - completed
 jobs:
   migrate:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     env:
       FLYWAY_URL: jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT }}:${{ secrets.DB_PORT }}/BeantasticDB
