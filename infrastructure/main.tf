@@ -10,7 +10,7 @@ terraform {
 
   backend "s3" {
     bucket = "beantastic-state-bucket"
-    key = "infrastructure/state-files"
+    key = "infrastructure/db/state-files"
     region = "eu-west-1"
   }
 }
@@ -103,24 +103,25 @@ resource "aws_db_subnet_group" "beantastic_subnet_group" {
 resource "aws_security_group" "beantastic_security_group" {
   vpc_id = aws_vpc.beantastic_vpc.id
 
-  ingress {
-    from_port   = 5432
-    to_port     = 5432
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
   tags = {
     owner: "cameron.cohen@bbd.co.za"
   }
 }
+
+resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
+  security_group_id = aws_security_group.beantastic_security_group.id
+  cidr_ipv4         = aws_vpc.beantastic_vpc.cidr_block
+  from_port         = 80
+  ip_protocol       = "tcp"
+  to_port           = 80
+}
+
+resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
+  security_group_id = aws_security_group.beantastic_security_group.id
+  cidr_ipv4         = "0.0.0.0/0"
+  ip_protocol       = "-1"
+}
+
 
 resource "aws_db_instance" "beantastic_postgres_rds" {
   allocated_storage = 5
