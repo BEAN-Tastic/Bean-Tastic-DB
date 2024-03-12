@@ -29,14 +29,56 @@ VALUES(
 ),
 (
     (SELECT itemId FROM Item WHERE name = 'Witch''s Watermelon' LIMIT 1),
-    (SELECT statisticTypeId FROM StatisticType LIMIT 1),
+    (SELECT statisticTypeId FROM StatisticType where name = "HEALTH" LIMIT 1),
+    'All Stats Boosted',
+    'Increases all stat points when consumed',
+    25
+),
+(
+    (SELECT itemId FROM Item WHERE name = 'Witch''s Watermelon' LIMIT 1),
+    (SELECT statisticTypeId FROM StatisticType where name = "ATTACK" LIMIT 1),
+    'All Stats Boosted',
+    'Increases all stat points when consumed',
+    25
+),
+(
+    (SELECT itemId FROM Item WHERE name = 'Witch''s Watermelon' LIMIT 1),
+    (SELECT statisticTypeId FROM StatisticType where name = "DEFENSE" LIMIT 1),
+    'All Stats Boosted',
+    'Increases all stat points when consumed',
+    25
+),
+(
+    (SELECT itemId FROM Item WHERE name = 'Witch''s Watermelon' LIMIT 1),
+    (SELECT statisticTypeId FROM StatisticType where name = "RIZZ" LIMIT 1),
     'All Stats Boosted',
     'Increases all stat points when consumed',
     25
 ),
 (
     (SELECT itemId FROM Item WHERE name = 'Wizard''s Strawberry' LIMIT 1),
-    (SELECT statisticTypeId FROM StatisticType LIMIT 1),
+    (SELECT statisticTypeId FROM StatisticType where name = "HEALTH" LIMIT 1),
+    'All Stats Decreased',
+    'Decreases all stat points when consumed',
+    -30
+),
+(
+    (SELECT itemId FROM Item WHERE name = 'Wizard''s Strawberry' LIMIT 1),
+    (SELECT statisticTypeId FROM StatisticType where name = "ATTACK" LIMIT 1),
+    'All Stats Decreased',
+    'Decreases all stat points when consumed',
+    -30
+),
+(
+    (SELECT itemId FROM Item WHERE name = 'Wizard''s Strawberry' LIMIT 1),
+    (SELECT statisticTypeId FROM StatisticType where name = "DEFENSE" LIMIT 1),
+    'All Stats Decreased',
+    'Decreases all stat points when consumed',
+    -30
+),
+(
+    (SELECT itemId FROM Item WHERE name = 'Wizard''s Strawberry' LIMIT 1),
+    (SELECT statisticTypeId FROM StatisticType where name = "RIZZ" LIMIT 1),
     'All Stats Decreased',
     'Decreases all stat points when consumed',
     -30
