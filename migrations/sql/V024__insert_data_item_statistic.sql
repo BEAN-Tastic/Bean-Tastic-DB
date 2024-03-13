@@ -85,16 +85,16 @@ VALUES(
 ),
 (
     (SELECT itemId FROM Item WHERE name = 'Enchanter''s Eggplant' LIMIT 1),
-    (SELECT statisticTypeId FROM StatisticType WHERE name = 'RIZZ' LIMIT 1),
-    'Rizz Decrease',
-    'Decreases Rizz stat points when consumed',
+    (SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
+    'Health Decrease',
+    'Decreases health stat points when consumed',
     -15
 ),
 (
     (SELECT itemId FROM Item WHERE name = 'Sorceress'' Spinach' LIMIT 1),
-    (SELECT statisticTypeId FROM StatisticType WHERE name = 'HEALTH' LIMIT 1),
-    'Health Decrease',
-    'Decreases health points when touched',
+    (SELECT statisticTypeId FROM StatisticType WHERE name = 'ATTACK' LIMIT 1),
+    'Attack Decrease',
+    'Decreases Attack points when touched',
     -30
 ),
 (
