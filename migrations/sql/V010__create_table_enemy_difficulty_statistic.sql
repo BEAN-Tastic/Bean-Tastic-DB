@@ -1,5 +1,5 @@
 CREATE TABLE EnemyDifficultyStatistic (
-    enemyDifficultyStatiticId SERIAL PRIMARY KEY,
+    enemyDifficultyStatisticId SERIAL PRIMARY KEY,
     statisticTypeId INT NOT NULL,
     enemyDifficultyId INT NOT NULL,
     points INT NOT NULL,
